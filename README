@@ -130,3 +130,26 @@ string.Split
     bufio.Scanner
     ioutil.ReadFile
     ioutil.WriteFile
+
+1.4 Animated GIFs
+
+Lissajous figures
+
+refer to package with the last component of a path
+    gif.GIF belongs to image/gif
+
+const may appear
+    at package level
+    within a function
+const must be
+    number
+    string
+    boolean
+
+composite literals
+    slice []color.Color{...}
+    struct gif.GIF{...}
+
+struct groups fields
+
+builtin append function
