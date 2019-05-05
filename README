@@ -2,3 +2,131 @@ The Go Programming Language
 Brian W. Kernighan, Alan A. A. Donovan
 Addison-Wesley Professional
 2015
+
+1. Tutorial
+
+1.1 Hello, World
+
+compiled
+
+go run
+go build
+go get
+
+unicode
+
+package <--> {1+} *.go
+
+main package
+main function
+
+Must import exact packages, no more, no less.
+
+package
+imports
+declarations
+    func
+    var
+    const
+    type
+functions
+
+Semicolons are not required, except when multiple statements appear on the same line.
+
+gofmt
+go fmt
+
+goimports
+
+1.2 Command-Line Arguments
+
+os package
+os.Args, a slice of strings
+s[i]
+s[m:n], 0<=m<=n<=len(s), containing n-m elements
+m defaults to 0 if omitted
+n defaults to len(s) if omitted
+
+os.Args[0] is the name of the command.
+os.Args[1:] are the arguments.
+
+comments begin will //
+package comments precedes package declaration
+var can be explicitly initialized as port of declaration, or implicitly to zero value of its type.
+
++ operator can concatenate strings
++= assignment operator
+:= short variable declaration
+postfix only, i++ not ++i
+
+for initialization; condition; post {
+    // zero or more statements
+}
+
+Braces are mandatory, the rest are optional.
+
+initialization must be a simple statement
+    a short variable declaration
+    an increment or assignment statement
+    a function call
+
+for can also iterate over a range.
+
+unused local variable is forbidden.
+
+blank identifier _
+
+ways to declare a string
+    s := "" // only in functions, not for package level
+    var s string // relies on default
+    var s = "" // rarely used
+    var s string = "" // explicit if need different value from default
+
+    preference: 1, 2, 4, 3
+
+1.3 Finding Duplicate Lines
+
+Parentheses are not used around the condition of if statement, but
+brances are required for the body.
+
+A map
+    holds a set of key-value pairs
+    provides constant-time operations
+    needs a key type that is comparable using ==
+    iterates in unspecified/random order
+
+bufio.Scanner
+bufio.Scanner.Scan()
+    reads the next line
+    tripping the newline character
+    returns true if there is a line
+    returns false if no more input
+
+fmt.Printf
+    format using verbs
+    escape sequences, e.g. \t, \n
+    no newline by default
+
+Printf, no newline
+    fmt.Printf
+    log.Printf
+    fmt.ErrorF
+
+Println, newline
+    fmt.Println
+
+os.Open() returns
+    *os.File
+    error
+
+Functions and other package-level entities may be declared in any order.
+
+A map is passed by reference.
+
+ioutil.ReadFile
+string.Split
+
+*os.File provides low level methods Read and Write used by
+    bufio.Scanner
+    ioutil.ReadFile
+    ioutil.WriteFile
