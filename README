@@ -153,3 +153,7 @@ composite literals
 struct groups fields
 
 builtin append function
+
+1.5 Fetching a URL
+
+net/http
