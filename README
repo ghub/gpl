@@ -157,3 +157,13 @@ builtin append function
 1.5 Fetching a URL
 
 net/http
+
+1.6 Fetching URLs Concurrently
+
+A goroutine is a concurrent function execution.
+A channel is a communication mechanism among goroutines.
+main runs in a goroutine.
+go satement creates additional goroutines.
+
+A goroutine blocks when send or receive on a channel until
+another goroutine receives or sends correspondingly.
